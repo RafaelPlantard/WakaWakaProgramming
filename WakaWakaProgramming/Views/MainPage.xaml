@@ -1,14 +1,18 @@
-﻿<Page
-    x:Class="WakaWakaProgramming.MainPage"
+﻿<storeApps:VisualStateAwarePage
+    x:Class="WakaWakaProgramming.Views.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:WakaWakaProgramming"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:WakaWakaProgramming"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mvvm="using:Microsoft.Practices.Prism.Mvvm"
+    xmlns:storeApps="using:Microsoft.Practices.Prism.StoreApps"
     mc:Ignorable="d"
+    mvvm:ViewModelLocator.AutoWireViewModel="True"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
 
     </Grid>
-</Page>
+    
+</storeApps:VisualStateAwarePage>
