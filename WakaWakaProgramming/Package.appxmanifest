@@ -1,41 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-
-  <Identity Name="297bd436-6e33-4945-bfbd-4ce3d1bff4a5"
-            Publisher="CN=Rafael"
-            Version="1.0.0.0" />
-
-  <mp:PhoneIdentity PhoneProductId="297bd436-6e33-4945-bfbd-4ce3d1bff4a5" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
-
+  <Identity Name="51943RafaelFerreira.WakaWakaProgramming" Publisher="CN=080E2844-4025-4467-B92D-B9BF43E6072F" Version="1.1.0.0" />
+  <mp:PhoneIdentity PhoneProductId="f964d5a9-66a1-41a4-a2d3-27074103f456" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>WakaWakaProgramming</DisplayName>
-    <PublisherDisplayName>Rafael</PublisherDisplayName>
+    <DisplayName>Waka Waka Programming</DisplayName>
+    <PublisherDisplayName>Rafael Ferreira</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
-
   <Prerequisites>
     <OSMinVersion>6.3.1</OSMinVersion>
     <OSMaxVersionTested>6.3.1</OSMaxVersionTested>
   </Prerequisites>
-  
   <Resources>
-    <Resource Language="x-generate"/>
+    <Resource Language="x-generate" />
   </Resources>
-
   <Applications>
-    <Application Id="App"
-        Executable="$targetnametoken$.exe"
-        EntryPoint="WakaWakaProgramming.App">
-        <m3:VisualElements
-            DisplayName="WakaWakaProgramming"
-            Square150x150Logo="Assets\Logo.png"
-            Square44x44Logo="Assets\SmallLogo.png"
-            Description="WakaWakaProgramming"
-            ForegroundText="light"
-            BackgroundColor="transparent">
-            <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png"/>
-            <m3:SplashScreen Image="Assets\SplashScreen.png"/>
-        </m3:VisualElements>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="WakaWakaProgramming.App">
+      <m3:VisualElements DisplayName="Waka Waka Programming" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="WakaWakaProgramming" ForegroundText="light" BackgroundColor="transparent">
+        <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png">
+        </m3:DefaultTile>
+        <m3:SplashScreen Image="Assets\SplashScreen.png" />
+      </m3:VisualElements>
     </Application>
   </Applications>
   <Capabilities>
