@@ -1,7 +1,7 @@
 ﻿using Microsoft.Practices.Prism.Mvvm;
 using Newtonsoft.Json;
 
-namespace WakaWakaProgramming.Models
+namespace WakaWakaProgramming.Models.Users
 {
     /// <summary>
     /// The response of User Api request.
@@ -11,7 +11,7 @@ namespace WakaWakaProgramming.Models
     {
         #region Fields
 
-        private UserBase _dataUser;
+        private User _dataUser;
 
         #endregion
 
@@ -21,7 +21,7 @@ namespace WakaWakaProgramming.Models
         /// The user data.
         /// </summary>
         [JsonProperty("data")]
-        public UserBase DataUser
+        public User DataUser
         {
             get { return _dataUser; }
             set { SetProperty(ref _dataUser, value); }

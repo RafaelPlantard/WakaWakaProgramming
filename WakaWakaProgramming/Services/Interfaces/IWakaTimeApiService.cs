@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Refit;
 using WakaWakaProgramming.Models;
+using WakaWakaProgramming.Models.Users;
 
 namespace WakaWakaProgramming.Services.Interfaces
 {
@@ -103,6 +104,7 @@ namespace WakaWakaProgramming.Services.Interfaces
         /// </summary>
         /// <param name="authorization">The authorization based on the api-key enconded to base64.</param>
         /// <returns>Returns a single user.</returns>
+        [Get("/users/current")]
         Task<UserResponse> GetUsers([Header("Authorization")] string authorization);
 
         #endregion

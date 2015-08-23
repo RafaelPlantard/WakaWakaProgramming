@@ -1,5 +1,6 @@
 ﻿using Microsoft.Practices.Prism.Mvvm;
 using Newtonsoft.Json;
+using WakaWakaProgramming.Models.Users;
 
 namespace WakaWakaProgramming.Models
 {
@@ -13,7 +14,7 @@ namespace WakaWakaProgramming.Models
 
         private int _rankPosition;
         private RunningTotal _running;
-        private UserBase _rankedUser;
+        private User _rankedUser;
 
         #endregion
 
@@ -43,7 +44,7 @@ namespace WakaWakaProgramming.Models
         /// The data of the ranked user.
         /// </summary>
         [JsonProperty("user")]
-        public UserBase RankedUser
+        public User RankedUser
         {
             get { return _rankedUser; }
             set { SetProperty(ref _rankedUser, value); }

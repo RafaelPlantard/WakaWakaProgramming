@@ -14,7 +14,7 @@ namespace WakaWakaProgramming
     {
         #region Fields
 
-        private IUnityContainer _unityContainer = new UnityContainer();
+        private readonly IUnityContainer _unityContainer = new UnityContainer();
 
         #endregion
 
@@ -62,7 +62,7 @@ namespace WakaWakaProgramming
         /// <returns>Returns a <see cref="Task"/>, so that you can perform asynchronous operations inside it.</returns>
         protected override Task OnLaunchApplicationAsync(LaunchActivatedEventArgs args)
         {
-            NavigationService.Navigate("Main", null);
+            NavigationService.Navigate("Login", null);
 
             return Task.FromResult<object>(null);
         }

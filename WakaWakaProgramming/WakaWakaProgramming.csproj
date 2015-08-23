@@ -93,13 +93,19 @@
     </Compile>
     <Compile Include="Models\CodeEditor.cs" />
     <Compile Include="Models\DurationBlock.cs" />
+    <Compile Include="Models\Editor.cs" />
+    <Compile Include="Models\GrandTotal.cs" />
     <Compile Include="Models\HeartBeat.cs" />
     <Compile Include="Models\HeartBeatBase.cs" />
     <Compile Include="Models\HeartBeatPostRequest.cs" />
     <Compile Include="Models\HeartBeatPostResponse.cs" />
     <Compile Include="Models\HeartBeatResponse.cs" />
+    <Compile Include="Models\Interfaces\IGrandTotal.cs" />
+    <Compile Include="Models\Interfaces\ISummary.cs" />
     <Compile Include="Models\Leader.cs" />
     <Compile Include="Models\LeaderResponse.cs" />
+    <Compile Include="Models\Summaries\OperatingSystem.cs" />
+    <Compile Include="Models\Range.cs" />
     <Compile Include="Models\SummaryResponse.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserRank.cs" />
@@ -108,13 +114,18 @@
     <Compile Include="Models\ProgrammingLanguageBase.cs" />
     <Compile Include="Models\Project.cs" />
     <Compile Include="Models\RunningTotal.cs" />
-    <Compile Include="Models\UserBase.cs" />
+    <Compile Include="Models\Users\User.cs" />
     <Compile Include="Models\DurationResponse.cs" />
     <Compile Include="Models\StatsResponse.cs" />
-    <Compile Include="Models\UserResponse.cs" />
+    <Compile Include="Models\Users\UserResponse.cs" />
+    <Compile Include="Models\UserSummary.cs" />
     <Compile Include="RefitStubs.cs" />
     <Compile Include="Services\Interfaces\IWakaTimeApiService.cs" />
+    <Compile Include="ViewModels\LoginPageViewModel.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
+    <Compile Include="Views\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -139,6 +150,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Views\LoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -194,7 +209,12 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Models\Durations\" />
+    <Folder Include="Models\Heartbeats\" />
+    <Folder Include="Models\Leaders\" />
+    <Folder Include="Models\Stats\" />
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>
   </PropertyGroup>

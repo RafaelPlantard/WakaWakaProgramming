@@ -1,5 +1,6 @@
 ﻿using Microsoft.Practices.Prism.Mvvm;
 using Newtonsoft.Json;
+using WakaWakaProgramming.Models.Users;
 
 namespace WakaWakaProgramming.Models
 {
@@ -27,7 +28,7 @@ namespace WakaWakaProgramming.Models
         /// The user data.
         /// </summary>
         [JsonProperty("user")]
-        public UserBase User { get; set; }
+        public User User { get; set; }
 
         #endregion
     }

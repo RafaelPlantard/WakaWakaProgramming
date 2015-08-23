@@ -1,38 +1,27 @@
-﻿using System;
-using Microsoft.Practices.Prism.Mvvm;
+﻿using Microsoft.Practices.Prism.Mvvm;
 using Newtonsoft.Json;
 
 namespace WakaWakaProgramming.Models
 {
     /// <summary>
-    /// A code editor used by the user.
+    /// The editor returned when the summary is requested.
     /// </summary>
-    [JsonObject]
-    public class CodeEditor : BindableBase
+    public class Editor : BindableBase
     {
         #region Fields
 
-        private DateTime _createdAt;
         private string _digital;
-        private string _id;
-        private DateTime _modifiedAt;
+        private int _hours;
+        private int _minutes;
         private string _name;
         private double _percent;
+        private int _seconds;
+        private string _text;
         private int _totalSeconds;
 
         #endregion
 
         #region Properties
-
-        /// <summary>
-        /// Time when code editor was created in ISO 8601 format.
-        /// </summary>
-        [JsonProperty("created_at")]
-        public DateTime CreatedAt
-        {
-            get { return _createdAt; }
-            set { SetProperty(ref _createdAt, value); }
-        }
 
         /// <summary>
         /// Total logged time for this editor in digital clock format.
@@ -45,23 +34,23 @@ namespace WakaWakaProgramming.Models
         }
 
         /// <summary>
-        /// Unique id of code editor.
+        /// Hours portion of logged time for this editor.
         /// </summary>
-        [JsonProperty("id")]
-        public string Id
+        [JsonProperty("hours")]
+        public int Hours
         {
-            get { return _id; }
-            set { SetProperty(ref _id, value); }
+            get { return _hours; }
+            set { SetProperty(ref _hours, value); }
         }
 
         /// <summary>
-        /// Time when these editor were last updated in ISO 8601 format
+        /// Minutes portion of logged time for this editor.
         /// </summary>
-        [JsonProperty("modified_at")]
-        public DateTime ModifiedAt
+        [JsonProperty("minutes")]
+        public int Minutes
         {
-            get { return _modifiedAt; }
-            set { SetProperty(ref _modifiedAt, value); }
+            get { return _minutes; }
+            set { SetProperty(ref _minutes, value); }
         }
 
         /// <summary>
@@ -82,6 +71,26 @@ namespace WakaWakaProgramming.Models
         {
             get { return _percent; }
             set { SetProperty(ref _percent, value); }
+        }
+
+        /// <summary>
+        /// Seconds portion of logged time for this editor.
+        /// </summary>
+        [JsonProperty("seconds")]
+        public int Seconds
+        {
+            get { return _seconds; }
+            set { SetProperty(ref _seconds, value); }
+        }
+
+        /// <summary>
+        /// Total logged time in human readable format.
+        /// </summary>
+        [JsonProperty("text")]
+        public string Text
+        {
+            get { return _text; }
+            set { SetProperty(ref _text, value); }
         }
 
         /// <summary>
