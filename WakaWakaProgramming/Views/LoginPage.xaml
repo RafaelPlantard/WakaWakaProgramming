@@ -9,10 +9,10 @@
     xmlns:storeApps="using:Microsoft.Practices.Prism.StoreApps"
     mc:Ignorable="d"
     mvvm:ViewModelLocator.AutoWireViewModel="True"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource FitbitForProgrammersSolidColorBrush}">
 
-    <Grid Background="Aqua">
+    <Grid>
 
     </Grid>
-    
+
 </storeApps:VisualStateAwarePage>
