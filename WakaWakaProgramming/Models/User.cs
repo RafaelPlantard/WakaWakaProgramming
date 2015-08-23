@@ -1,129 +1,118 @@
-﻿using Microsoft.Practices.Prism.Mvvm;
+﻿using System;
 using Newtonsoft.Json;
 
 namespace WakaWakaProgramming.Models
 {
     /// <summary>
-    /// A user of Waka Time.
+    /// The user returned on Users Api request.
     /// </summary>
     [JsonObject]
-    public class User : BindableBase
+    public class User : UserBase
     {
         #region Fields
 
-        private string _id;
-        private string _email;
-        private string _fullName;
-        private string _humanReadableWebsite;
-        private bool _isEmailPublic;
-        private string _location;
-        private bool _photoPublic;
-        private string _photo;
-        private string _username;
-        private string _website;
+        private DateTime _created;
+        private DateTime _lastHeartbeat;
+        private string _lastPlugin;
+        private string _lastPluginName;
+        private string _lastProject;
+        private bool _isLoggedTimePublic;
+        private DateTime _modified;
+        private string _plan;
+        private TimeZoneInfo _timezone;
 
         #endregion
 
         #region Properties
 
         /// <summary>
-        /// Email address of user, if public.
+        /// Time when user was created in ISO 8601 format.
         /// </summary>
-        [JsonProperty("email")]
-        public string Email
+        [JsonProperty("created")]
+        public DateTime Created
         {
-            get { return _email; }
-            set { SetProperty(ref _email, value); }
+            get { return _created; }
+            set { SetProperty(ref _created, value); }
         }
 
         /// <summary>
-        /// Whether this user's email should be shown publicly on leader boards.
+        /// Time of most recent heartbeat logged by this user.
         /// </summary>
-        [JsonProperty("email_public")]
-        public bool IsEmailPublic
+        [JsonProperty("last_heartbeat")]
+        public DateTime LastHeartbeat
         {
-            get { return _isEmailPublic; }
-            set { SetProperty(ref _isEmailPublic, value); }
+            get { return _lastHeartbeat; }
+            set { SetProperty(ref _lastHeartbeat, value); }
         }
 
         /// <summary>
-        /// Full name of user.
+        /// Last plugin used by this user.
         /// </summary>
-        [JsonProperty("full_name")]
-        public string FullName
+        [JsonProperty("last_plugin")]
+        public string LastPlugin
         {
-            get { return _fullName; }
-            set { SetProperty(ref _fullName, value); }
+            get { return _lastPlugin; }
+            set { SetProperty(ref _lastPlugin, value); }
         }
 
         /// <summary>
-        /// Website of user without url scheme.
+        /// Last plugin name used by this user
         /// </summary>
-        [JsonProperty("human_readable_website")]
-        public string HumanReadableWebsite
+        [JsonProperty("last_plugin_name")]
+        public string LastPluginName
         {
-            get { return _humanReadableWebsite; }
-            set { SetProperty(ref _humanReadableWebsite, value); }
+            get { return _lastPluginName; }
+            set { SetProperty(ref _lastPluginName, value); }
         }
 
         /// <summary>
-        /// Unique id of user.
+        /// Name of last project logged by this user.
         /// </summary>
-        [JsonProperty("id")]
-        public string Id
+        [JsonProperty("last_project")]
+        public string LastProject
         {
-            get { return _id; }
-            set { SetProperty(ref _id, value); }
+            get { return _lastProject; }
+            set { SetProperty(ref _lastProject, value); }
         }
 
         /// <summary>
-        /// Location of user.
+        /// Whether this user's logged time should be shown publicly on leader boards.
         /// </summary>
-        [JsonProperty("location")]
-        public string Location
+        [JsonProperty("logged_time_public")]
+        public bool IsLoggedTimePublic
         {
-            get { return _location; }
-            set { SetProperty(ref _location, value); }
+            get { return _isLoggedTimePublic; }
+            set { SetProperty(ref _isLoggedTimePublic, value); }
         }
 
         /// <summary>
-        /// The photo url.
+        /// Time when user was last modified in ISO 8601 format.
         /// </summary>
-        [JsonProperty("photo")]
-        public string Photo
+        [JsonProperty("modified")]
+        public DateTime Modified
         {
-            get { return _photo; }
-            set { SetProperty(ref _photo, value); }
+            get { return _modified; }
+            set { SetProperty(ref _modified, value); }
         }
 
         /// <summary>
-        /// Whether this user's photo should be shown publicly on leader boards.
+        /// Users subscription plan.
         /// </summary>
-        [JsonProperty("photo_public")]
-        public bool PhotoPublic
+        [JsonProperty("plan")]
+        public string Plan
         {
-            get { return _photoPublic; }
-            set { SetProperty(ref _photoPublic, value); }
+            get { return _plan; }
+            set { SetProperty(ref _plan, value); }
         }
 
         /// <summary>
-        /// Users public username.
+        /// User's timezone in Olson Country/Region format.
         /// </summary>
-        [JsonProperty("username")]
-        public string Username
+        [JsonProperty("timezone")]
+        public TimeZoneInfo Timezone
         {
-            get { return _username; }
-            set { SetProperty(ref _username, value); }
-        }
-
-        /// <summary>
-        /// Website of user.
-        /// </summary>
-        [JsonProperty("website")]
-        public string Website
-        {
-            get { return _website; }
-            set { SetProperty(ref _website, value); }
+            get { return _timezone; }
+            set { SetProperty(ref _timezone, value); }
         }
 
         #endregion

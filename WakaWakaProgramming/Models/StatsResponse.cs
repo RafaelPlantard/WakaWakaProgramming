@@ -10,7 +10,7 @@ namespace WakaWakaProgramming.Models
     /// The stats of a user for a specific given time range.
     /// </summary>
     [JsonObject]
-    public class UserStats : BindableBase
+    public class StatsResponse : BindableBase
     {
         #region Fields
 

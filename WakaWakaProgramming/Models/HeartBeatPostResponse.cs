@@ -4,17 +4,17 @@ using Newtonsoft.Json;
 namespace WakaWakaProgramming.Models
 {
     /// <summary>
-    /// The basic structure of heart beats.
+    /// The heartbase was created on WakaTime Api.
     /// </summary>
     [JsonObject]
-    public class HeartBeatBase : BindableBase
+    public class HeartBeatPostResponse : BindableBase
     {
         #region Fields
 
-        private string _id;
         private string _entity;
         private string _type;
         private double _time;
+        private string _id;
 
         #endregion
 

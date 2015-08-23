@@ -27,7 +27,7 @@ namespace WakaWakaProgramming.Models
         /// The user data.
         /// </summary>
         [JsonProperty("user")]
-        public User User { get; set; }
+        public UserBase User { get; set; }
 
         #endregion
     }

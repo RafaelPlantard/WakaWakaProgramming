@@ -13,7 +13,7 @@ namespace WakaWakaProgramming.Models
 
         private int _rankPosition;
         private RunningTotal _running;
-        private User _rankedUser;
+        private UserBase _rankedUser;
 
         #endregion
 
@@ -26,7 +26,7 @@ namespace WakaWakaProgramming.Models
         public int RankPosition
         {
             get { return _rankPosition; }
-            set { _rankPosition = value; }
+            set { SetProperty(ref _rankPosition, value); }
         }
 
         /// <summary>
@@ -36,17 +36,17 @@ namespace WakaWakaProgramming.Models
         public RunningTotal Running
         {
             get { return _running; }
-            set { _running = value; }
+            set { SetProperty(ref _running, value); }
         }
 
         /// <summary>
         /// The data of the ranked user.
         /// </summary>
         [JsonProperty("user")]
-        public User RankedUser
+        public UserBase RankedUser
         {
             get { return _rankedUser; }
-            set { _rankedUser = value; }
+            set { SetProperty(ref _rankedUser, value); }
         }
 
         #endregion
