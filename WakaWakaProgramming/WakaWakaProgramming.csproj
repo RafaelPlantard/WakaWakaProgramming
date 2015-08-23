@@ -97,13 +97,15 @@
     <Compile Include="Models\HeartBeatBase.cs" />
     <Compile Include="Models\HeartbeatsResponse.cs" />
     <Compile Include="Models\Leader.cs" />
+    <Compile Include="Models\LeaderResponse.cs" />
+    <Compile Include="Models\UserRank.cs" />
     <Compile Include="Models\OperatingSystem.cs" />
     <Compile Include="Models\ProgrammingLanguage.cs" />
     <Compile Include="Models\ProgrammingLanguageBase.cs" />
     <Compile Include="Models\Project.cs" />
     <Compile Include="Models\RunningTotal.cs" />
     <Compile Include="Models\User.cs" />
-    <Compile Include="Models\UserDay.cs" />
+    <Compile Include="Models\DurationResponse.cs" />
     <Compile Include="Models\UserStats.cs" />
     <Compile Include="RefitStubs.cs" />
     <Compile Include="Services\Interfaces\IWakaTimeApiService.cs" />

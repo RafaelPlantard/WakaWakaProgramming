@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 namespace WakaWakaProgramming.Models
 {
     /// <summary>
-    /// 
+    /// The leader data.
     /// </summary>
     [JsonObject]
     public class Leader : BindableBase
@@ -24,7 +24,7 @@ namespace WakaWakaProgramming.Models
         public RunningTotal Running { get; set; }
 
         /// <summary>
-        /// 
+        /// The user data.
         /// </summary>
         [JsonProperty("user")]
         public User User { get; set; }

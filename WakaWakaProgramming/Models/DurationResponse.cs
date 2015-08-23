@@ -8,7 +8,7 @@ namespace WakaWakaProgramming.Models
     /// A description of activity of a user in a specific day.
     /// </summary>
     [JsonObject]
-    public class UserDay : BindableBase
+    public class DurationResponse : BindableBase
     {
         #region Fields
 

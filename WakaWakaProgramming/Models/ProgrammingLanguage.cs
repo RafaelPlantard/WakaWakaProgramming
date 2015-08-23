@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Newtonsoft.Json;
 
 namespace WakaWakaProgramming.Models
 {
     /// <summary>
-    /// 
+    /// Represents a more specific programming language details.
     /// </summary>
     [JsonObject]
-    public class ProgrammingLanguage
+    public class ProgrammingLanguage : ProgrammingLanguageBase
     {
         #region Fields
 
@@ -40,20 +36,8 @@ namespace WakaWakaProgramming.Models
         /// <summary>
         /// 
         /// </summary>
-        [JsonProperty("name")]
-        public string Name { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         [JsonProperty("percent")]
         public double Percent { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [JsonProperty("total_seconds")]
-        public int TotalSeconds { get; set; } 
 
         #endregion
     }
