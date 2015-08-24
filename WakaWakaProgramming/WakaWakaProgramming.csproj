@@ -173,6 +173,8 @@
     <Content Include="Assets\Unity.scale-240.png" />
     <Content Include="Assets\Vim.scale-240.png" />
     <Content Include="Assets\VisualStudio.scale-240.png" />
+    <Content Include="Assets\WakaTime.scale-240.png" />
+    <Content Include="Assets\WakaTimeWhite.scale-240.png" />
     <Content Include="Assets\WebStorm.scale-240.png" />
     <Content Include="Assets\WideLogo.scale-240.png" />
     <Content Include="Assets\Xamarin.scale-240.png" />

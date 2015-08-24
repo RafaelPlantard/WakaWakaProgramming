@@ -9,9 +9,45 @@
     xmlns:storeApps="using:Microsoft.Practices.Prism.StoreApps"
     mc:Ignorable="d"
     mvvm:ViewModelLocator.AutoWireViewModel="True"
-    Background="{ThemeResource FitbitForProgrammersSolidColorBrush}">
+    Background="{ThemeResource MenuForegroundSolidColorBrush}">
 
     <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*" />
+            <RowDefinition Height="42*" />
+            <RowDefinition Height="8*" />
+        </Grid.RowDefinitions>
+        
+        <Grid Grid.Row="0" Margin="15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="15*" />
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="35*" />
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="30*" />
+            </Grid.RowDefinitions>
+            
+            <StackPanel Grid.Row="0" Orientation="Horizontal" Opacity="0.5">
+                <Image Style="{ThemeResource WakaTimeWhite}" />
+                <TextBlock Text="WakaTime" Margin="10,0" FontSize="{ThemeResource TextStyleExtraExtraLargeFontSize}" FontWeight="SemiBold" VerticalAlignment="Center" Foreground="White" />
+            </StackPanel>
+            
+            <StackPanel Grid.Row="2">
+                <TextBlock Text="Sign in to WakaTime" />
+                <TextBox PlaceholderText="type your api key" />
+                <Rectangle Height="1" Fill="White" />
+            </StackPanel>
+            
+        </Grid>
+
+        <Grid Grid.Row="2" Background="{ThemeResource OverviewBackgroundSolidColorBrush}">
+            <TextBlock>
+                <Run Text="New to WakaTime?" />
+                <LineBreak />
+                <Run Text="Create a account" />
+            </TextBlock>
+        </Grid>
 
     </Grid>
 

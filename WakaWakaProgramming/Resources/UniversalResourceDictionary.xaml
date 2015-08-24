@@ -1,17 +1,21 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    
+
     <!--#region Brushes-->
 
     <!--#region SolidColorBrush-->
+
+    <SolidColorBrush Color="#335F88" x:Key="EditorsBackgroundSolidColorBrush" />
 
     <SolidColorBrush Color="#527DA4" x:Key="FitbitForProgrammersSolidColorBrush" />
 
     <SolidColorBrush Color="#777777" x:Key="MenuForegroundSolidColorBrush" />
 
+    <SolidColorBrush Color="#35434F" x:Key="OverviewBackgroundSolidColorBrush" />
+
     <SolidColorBrush Color="#A8E4FF" x:Key="SubHeaderSolidColorBrush" />
-    
+
     <SolidColorBrush Color="#449D44" x:Key="SuccessBackgroundSolidColorBrush" />
 
     <SolidColorBrush Color="#398439" x:Key="SuccessBorderSolidColorBrush" />
@@ -19,5 +23,17 @@
     <!--#endregion SolidColorBrush-->
 
     <!--#endregion Brushes-->
+
+    <!--#region Styles-->
+
+    <!--#region Image-->
+
+    <Style TargetType="Image" x:Key="WakaTimeWhite">
+        <Setter Property="Source" Value="ms-appx:/Assets/WakaTimeWhite.png" />
+    </Style>
+
+    <!--#endregion Image-->
+
+    <!--#endregion Styles-->
 
 </ResourceDictionary>
